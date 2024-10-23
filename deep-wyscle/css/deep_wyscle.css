@@ -1,0 +1,359 @@
+:root {
+    --primary-color: #ffd300;
+    --secondary-color: #a2d254;
+    --primary_gradient-color: linear-gradient(90deg, #a2d254, #ffd300);
+    /* --secondary_gradient-color: ; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #141414;
+}
+
+/* Header css Start */
+.Header {}
+
+.Header .navbar-brand .logo {
+    width: 200px;
+    height: auto;
+}
+
+.Header .headerbutton {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.Header .headerbutton:hover {
+    background: var(--primary_gradient-color);
+}
+
+/* Header css End */
+/* Hero Section css Start */
+.Hero_Section {
+    background-image: url(../images/homepage/herosection.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 70vh;
+    padding: 20px 0px;
+}
+
+.Hero_Section .hero_Heading {
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+}
+
+.Hero_Section .sub_heading {
+    font-size: 26px;
+    color: white;
+    font-weight: 600;
+}
+
+.Hero_Section .card {
+    background: linear-gradient(90deg, #0009 1%, #0000 96.95%), url(../images/homepage/cardimagehero.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.Hero_Section .card .card-heading {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #fff;
+    margin: 0;
+    max-width: 60%;
+}
+
+.Hero_Section .card .card-perograph {
+    max-width: 60%;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #ebebf599;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 18px;
+}
+
+.Hero_Section .card .buttonlist {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    max-width: 60%;
+    gap: 0.5rem;
+}
+
+.Hero_Section .card .buttonlist li {
+    width: 32.333337%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 6px 8px;
+    background: #ffffff1f;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    min-height: 50px;
+
+}
+
+.Hero_Section .card .buttonlist li .tophed {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #fff;
+}
+
+.Hero_Section .card .buttonlist li .bottomp {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #ebebf599;
+}
+
+/* Farm And People Section Start */
+.Farm_People_Section {}
+
+.Farm_People_Section .heading {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.Farm_People_Section .inputpart {
+    position: relative;
+}
+
+.Farm_People_Section .inputpart .icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+}
+
+.Farm_People_Section .inputpart input {
+    padding-left: 40px;
+    width: auto;
+    background-color: transparent;
+    border-radius: 30px;
+    border-color: #424141;
+    color: white;
+    height: 45px;
+}
+
+.Farm_People_Section .inputpart input::placeholder {
+    color: #7b7a7a;
+}
+
+.Farm_People_Section .tabssec {
+    background-color: #272727;
+    border-radius: 30px;
+    padding: 6px 10px;
+    height: 45px;
+}
+
+.Farm_People_Section .tabssec .nav {
+    border-radius: 30px;
+}
+
+.Farm_People_Section .tabssec .nav .nav-item {}
+
+.Farm_People_Section .tabssec .nav .nav-item {}
+
+.Farm_People_Section .tabssec .nav .nav-link {
+    border-radius: 30px;
+    padding: 6px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #9C9CA2;
+
+}
+
+.Farm_People_Section .tabssec .nav .nav-link.active {
+    background: var(--primary_gradient-color);
+    color: #000000;
+}
+
+.Farm_People_Section .buttonsec {
+    transition: all 0.3s ease-in-out;
+    border-radius: 30px;
+    padding: 6px 10px;
+    height: 45px;
+
+}
+
+.Farm_People_Section .buttonsec:hover {
+    background: #272727;
+}
+
+.Farm_People_Section .buttonsec button {
+    background-color: transparent;
+}
+
+.Farm_People_Section .listcard {
+    border-radius: 10px;
+    background: #1D232E;
+    text-decoration: none;
+}
+
+.Farm_People_Section .listcard .iconimage {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Farm_People_Section .listcard .contectsec .heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.Farm_People_Section .listcard .contectsec ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.Farm_People_Section .listcard .contectsec ul li {
+    background-color: #32394E;
+    font-size: 14px;
+    color: #F58B00;
+    padding: 6px 10px;
+    border-radius: 8px;
+
+}
+.Farm_People_Section .listcard .stats{
+
+}
+.Farm_People_Section .listcard .stats .tvf-stats{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.Farm_People_Section .listcard .stats .tvf-stats .buttontextGroup {
+    font-size: 14px;
+    color: #FFF3D4;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+.Farm_People_Section .listcard .stats .tvf-stats .buttontextGroup .icon{
+width: 35px;
+height: 35px;
+border-radius: 50%;
+background-color: #F58B00;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.Farm_People_Section .listcard .stats .tvf-stats .buttontextGroup .lasttext{
+    font-size: 12px;
+    color: #616771;
+    font-weight: 500;
+}
+.buttonImagesec{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.buttonImagesec .viewbtn{
+    background: #11151C;
+    color: #616771;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 0;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+.buttonImagesec .viewbtn:hover{
+    background:#11151C ;
+}
+.buttonImagesec .viewbtn:active{
+    background:#11151C ;
+}
+.buttonImagesec .imagelist{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 0;
+}
+.buttonImagesec .imagelist li{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.buttonImagesec .imagelist li img{
+    border-radius: 50%;
+}
+
+/* Farm And People Section End */
+
+/* Footer Css Start */
+footer{
+    background: linear-gradient(90deg, #0009 1%, #0000 96.95%), url(../images/footer/footersvg.svg);
+}
+footer .logo{
+    width: 200px;
+    height: fit-content;
+}
+footer .footerHeading{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    margin-bottom: 10px;
+}
+footer .footerlist{
+    list-style: none;
+    padding-left: 0;
+}
+footer .footerlist li{
+    margin-bottom: 8px;
+}
+footer .footerlist li a{
+    color: rgb(155, 155, 155);
+    font-size: 16px;
+    font-weight: 500;
+    overflow-wrap: break-word;
+    text-decoration: none;
+}
+footer .footerbottomheading{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    margin-bottom: 10px;
+}
+footer p{
+    margin: 3px;
+    color: white;
+    font-size: 14px;
+}
+/* Footer Css End */
