@@ -377,7 +377,20 @@ footer p {
 /* Footer Css End */
 /* Page2 Css Start */
 .Page2 {}
-
+.Page2 .backtolistbtn{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff3d4;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.Page2 .backtolistbtn:hover{
+    color: var(--primary-color);
+}
 .Page2 .buttonGroup {
     background-color: #1d232e;
     border-radius: 30px;
