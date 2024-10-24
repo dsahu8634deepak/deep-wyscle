@@ -242,14 +242,15 @@ body {
     border-radius: 8px;
 
 }
-.Farm_People_Section .listcard .stats{
 
-}
-.Farm_People_Section .listcard .stats .tvf-stats{
+.Farm_People_Section .listcard .stats {}
+
+.Farm_People_Section .listcard .stats .tvf-stats {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
+
 .Farm_People_Section .listcard .stats .tvf-stats .buttontextGroup {
     font-size: 14px;
     color: #FFF3D4;
@@ -259,26 +260,30 @@ body {
     gap: 0.5rem;
     font-weight: 600;
 }
-.Farm_People_Section .listcard .stats .tvf-stats .buttontextGroup .icon{
-width: 35px;
-height: 35px;
-border-radius: 50%;
-background-color: #F58B00;
-display: flex;
-align-items: center;
-justify-content: center;
+
+.Farm_People_Section .listcard .stats .tvf-stats .buttontextGroup .icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #F58B00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.Farm_People_Section .listcard .stats .tvf-stats .buttontextGroup .lasttext{
+
+.Farm_People_Section .listcard .stats .tvf-stats .buttontextGroup .lasttext {
     font-size: 12px;
     color: #616771;
     font-weight: 500;
 }
-.buttonImagesec{
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+
+.buttonImagesec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.buttonImagesec .viewbtn{
+
+.buttonImagesec .viewbtn {
     background: #11151C;
     color: #616771;
     font-size: 14px;
@@ -292,68 +297,402 @@ justify-content: space-between;
     gap: 0.5rem;
     transition: all 0.3s ease-in-out;
 }
-.buttonImagesec .viewbtn:hover{
-    background:#11151C ;
+
+.buttonImagesec .viewbtn:hover {
+    background: #11151C;
 }
-.buttonImagesec .viewbtn:active{
-    background:#11151C ;
+
+.buttonImagesec .viewbtn:active {
+    background: #11151C;
 }
-.buttonImagesec .imagelist{
+
+.buttonImagesec .imagelist {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     padding-left: 0;
 }
-.buttonImagesec .imagelist li{
+
+.buttonImagesec .imagelist li {
     width: 30px;
     height: 30px;
     border-radius: 50%;
 }
-.buttonImagesec .imagelist li img{
+
+.buttonImagesec .imagelist li img {
     border-radius: 50%;
 }
 
 /* Farm And People Section End */
 
 /* Footer Css Start */
-footer{
+footer {
     background: linear-gradient(90deg, #0009 1%, #0000 96.95%), url(../images/footer/footersvg.svg);
 }
-footer .logo{
+
+footer .logo {
     width: 200px;
     height: fit-content;
 }
-footer .footerHeading{
+
+footer .footerHeading {
     color: white;
     font-size: 25px;
     font-weight: 600;
     overflow-wrap: break-word;
     margin-bottom: 10px;
 }
-footer .footerlist{
+
+footer .footerlist {
     list-style: none;
     padding-left: 0;
 }
-footer .footerlist li{
+
+footer .footerlist li {
     margin-bottom: 8px;
 }
-footer .footerlist li a{
+
+footer .footerlist li a {
     color: rgb(155, 155, 155);
     font-size: 16px;
     font-weight: 500;
     overflow-wrap: break-word;
     text-decoration: none;
 }
-footer .footerbottomheading{
+
+footer .footerbottomheading {
     color: white;
     font-size: 25px;
     font-weight: 600;
     overflow-wrap: break-word;
     margin-bottom: 10px;
 }
-footer p{
+
+footer p {
     margin: 3px;
     color: white;
     font-size: 14px;
 }
+
 /* Footer Css End */
+/* Page2 Css Start */
+.Page2 {}
+
+.Page2 .buttonGroup {
+    background-color: #1d232e;
+    border-radius: 30px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    padding: 8px 8px;
+}
+
+.Page2 .buttonGroup .Page2btn {
+    font-size: 14px;
+    color: white;
+}
+
+.Page2 .buttonGroup .Page2btn.active {
+    background: var(--primary_gradient-color);
+    color: black;
+    border-radius: 30px;
+}
+
+.Page2 .page2Heading {
+    color: #fff3d4;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.Page2 .page2Heading span {
+    color: var(--primary-color);
+}
+
+.Page2 .page2perograph {
+    font-size: 16px;
+    color: #fff3d4;
+    line-height: 29px;
+}
+
+.Page2 .linkheading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff3d4;
+    margin-bottom: 10px;
+}
+
+.Page2 .sociallink {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.Page2 .sociallink li {
+    transition: all 0.3s ease-in-out;
+}
+
+.Page2 .sociallink li:hover a i {
+    color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.Page2 .sociallink li a {
+    transition: all 0.3s ease-in-out;
+}
+
+.Page2 .sociallink li a i {
+    font-size: 28px;
+    color: #616771;
+}
+
+.Page2 .page2image {
+    max-height: 200px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.Page2 .nav {}
+
+.Page2 .nav .nav-item {}
+
+.Page2 .nav .nav-item .nav-link {}
+
+.Page2 .nav .nav-item .nav-link .active {}
+
+.Page2 .tabsect {}
+
+.Page2 .tabsect .buttonGroupThree {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+}
+
+.Page2 .tabsect .buttonGroupThree button {
+    width: fit-content;
+    height: 40px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: #1d232e;
+    color: var(--primary-color);
+}
+
+.Page2 .tabsect .headingtab {
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.Page2 .tabsect .numberlist {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+
+}
+
+.Page2 .tabsect .numberlist li {
+    width: 48%;
+    margin-bottom: 15px;
+
+}
+
+.Page2 .tabsect .numberlist li .number {
+    font-size: 30px;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.Page2 .tabsect .numberlist li .namenumber {
+    font-size: 16px;
+    color: #fff3d4;
+    font-weight: 400;
+}
+
+.Page2 .tabsect .card {
+    background: #11151c;
+    border: 1px solid #181e27;
+    border-radius: 4px;
+    margin: 15px 0;
+    padding: 20px;
+}
+
+.Page2 .tabsect .card .headingiconGroup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Page2 .tabsect .card .headingiconGroup .leftside {}
+
+.Page2 .tabsect .card .headingiconGroup .leftside .card-heading {
+    font-size: 20px;
+    color: #fff3d4;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.Page2 .tabsect .card .headingiconGroup .leftside p {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.Page2 .tabsect .card .headingiconGroup .leftside p i {
+    color: #616771;
+    margin-left: 5px;
+}
+
+.Page2 .tabsect .card .headingiconGroup .rightside {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Page2 .tabsect .card .headingiconGroup .rightside button {
+    font-size: 25px;
+    color: #616771;
+    padding: 0;
+}
+
+.Page2 .tabsect .card .checkGroup {
+    display: flex;
+    align-items: center;
+    border: 1px solid #161b24;
+    background: #161b24;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.Page2 .tabsect .card .checkGroup .group {
+    width: 33.3337%;
+    height: 50px;
+}
+
+
+.Page2 .tabsect .card .checkGroup .group .btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    color: white;
+    background-color: #1d232e;
+    border-color: #1d232e;
+}
+
+
+.Page2 .tabsect .card .checkGroup .group label {
+    width: 100%;
+    border-radius: 0;
+    height: 40px;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    height: 100%;
+    color: #97989a;
+}
+
+.Page2 .tabsect .card .checkGroup .group label span svg .aggregator-logo-active {
+    fill: #c9cacc;
+}
+
+.Page2 .tabsect .card .checkGroup .group label:checked span svg .aggregator-logo-active {
+    fill: #c9cacc;
+}
+
+
+.Page2 .tabsect .card .checkGroup .group label span {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+
+}
+
+.Page2 .tabsect .card .groupbuttontext {
+    margin-top: 15px;
+    background-color: #161b24;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 0;
+
+}
+
+.Page2 .tabsect .card .groupbuttontext .leftbutton {
+    display: flex;
+    align-items: center;
+    background-color: #1d232e;
+    max-width: 150px;
+    padding: 10px;
+}
+
+.Page2 .tabsect .card .groupbuttontext .leftbutton .icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Page2 .tabsect .card .groupbuttontext .leftbutton .modalbtn {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+
+.Page2 .tabsect .card .groupbuttontext .leftbutton .modalbtn .samlltext {
+    font-size: 14px;
+    color: #616771;
+    font-weight: 400;
+}
+
+.Page2 .tabsect .card .groupbuttontext .leftbutton .modalbtn .spn2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff3d4;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+}
+.Page2 .tabsect .card .groupbuttontext .inputyGroup .form-control{
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    color: #fff3d4;
+    text-align: end;
+    margin-bottom: 15px;
+}
+.Page2 .tabsect .card .groupbuttontext .inputyGroup .inputGroup{
+    font-size: 14px;
+    color: #fff3d4;
+    text-align: end;
+}
+.Page2 .tabsect .card .groupbuttontext .inputyGroup .inputGroup span{
+    color: var(--primary-color);
+}
+.Page2 .tabsect .card .walletbtn{
+    background: var(--primary_gradient-color);
+    width: 100%;
+    height: 55px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+/* Page2 Css End */
