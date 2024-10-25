@@ -34,14 +34,14 @@ body {
     transition: all 0.4s ease-in-out;
 }
 
-.Header .headerbutton:hover {
+/* .Header .headerbutton:hover {
     background: var(--primary_gradient-color);
-}
+} */
 
 /* Header css End */
 /* Hero Section css Start */
 .Hero_Section {
-    background-image: url(../images/homepage/herosection.png);
+    background-image: linear-gradient(#04040433, #21252903), url(../images/homepage/herosection.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 70vh;
@@ -207,16 +207,33 @@ body {
     gap: 1rem;
 }
 
+.Farm_People_Section .buttonsec .nav-pills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-bottom: 0;
+}
+
+.Farm_People_Section .buttonsec .nav-pills .nav-item {
+    padding: 0;
+    background: transparent;
+}
+
+.Farm_People_Section .buttonsec .nav-pills .nav-item .nav-link.active {
+    background-color: transparent;
+}
+
+.Farm_People_Section .buttonsec .nav-pills .nav-item .nav-link {
+    padding: 0;
+}
+
 .Farm_People_Section .buttonsec:hover {
     background: #272727;
 }
 
-.Farm_People_Section .buttonsec button {
-    background-color: transparent;
-    padding: 0;
 
-}
-
+/* List Card start */
 .Farm_People_Section .listcard {
     border-radius: 10px;
     background: #1D232E;
@@ -247,10 +264,12 @@ body {
     align-items: center;
     justify-content: center;
 }
-.Farm_People_Section .listcard .contectsec .heading span svg{
+
+.Farm_People_Section .listcard .contectsec .heading span svg {
     width: 100%;
     height: 100%;
 }
+
 .Farm_People_Section .listcard .contectsec ul {
     list-style: none;
     padding-left: 0;
@@ -302,6 +321,164 @@ body {
     font-weight: 500;
 }
 
+/* List Card End */
+
+/* Samll Card start css */
+.Farm_People_Section .smallcard {
+    border-radius: 20px;
+    position: relative;
+    text-decoration: none;
+}
+/* .Farm_People_Section .smallcard .card1:hover{
+    transform:scale(1);
+}
+.Farm_People_Section .smallcard .card1{
+    transform:scale(1.1);
+} */
+.Farm_People_Section .smallcard .card1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/homepage/smallcardimage.svg);
+}
+.Farm_People_Section .smallcard .card2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/homepage/banner.png);
+}
+.Farm_People_Section .smallcard .card3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/homepage/banner2.png);
+    object-fit: cover;
+}
+.Farm_People_Section .smallcard .card4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/homepage/banner3.png);
+}
+.Farm_People_Section .smallcard .card1,
+.Farm_People_Section .smallcard .card2,
+.Farm_People_Section .smallcard .card3,
+.Farm_People_Section .smallcard .card4 {
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+}
+
+
+.Farm_People_Section .smallcard .image_Heading {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.Farm_People_Section .smallcard .image_Heading .Small_Card_Heading {
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.Farm_People_Section .smallcard .image_Heading .Small_Card_Heading .firicon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Farm_People_Section .smallcard .card_icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Farm_People_Section .smallcard .SmallCardlistButton {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.Farm_People_Section .smallcard .SmallCardlistButton li {
+    font-size: 14px;
+    color: var(--primary-color);
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: #6c6c6c73;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+.Farm_People_Section .smallcard .stats {}
+
+.Farm_People_Section .smallcard .stats .tvf-stats {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.Farm_People_Section .smallcard .stats .tvf-stats .buttontextGroup {
+    font-size: 14px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 0.5rem;
+    font-weight: 600
+}
+
+.Farm_People_Section .smallcard .stats .tvf-stats .buttontextGroup .icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Farm_People_Section .smallcard .stats .tvf-stats .buttontextGroup .lasttext {
+    font-size: 12px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.Farm_People_Section .smallcard .button_image_Box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Farm_People_Section .smallcard .button_image_Box .viewbtn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-left: auto;
+    background: var(--primary_gradient-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 0.3rem;
+}
+
+.Farm_People_Section .smallcard .button_image_Box .imagelist {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+}
+.Farm_People_Section .smallcard .button_image_Box .imagelist > *:not(:first-child) {
+    margin-left: -7px;
+}
+
+.Farm_People_Section .smallcard .button_image_Box .imagelist li {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Small Card Css End */
 .buttonImagesec {
     display: flex;
     flex-direction: column;
