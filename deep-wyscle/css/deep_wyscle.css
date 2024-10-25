@@ -49,9 +49,10 @@ body {
 }
 
 .Hero_Section .hero_Heading {
-    font-size: 60px;
+    font-size: 56px;
     font-weight: 700;
     color: white;
+    font-family: sans-serif;
 }
 
 .Hero_Section .sub_heading {
@@ -61,24 +62,25 @@ body {
 }
 
 .Hero_Section .card {
-    background: linear-gradient(90deg, #0009 1%, #0000 96.95%), url(../images/homepage/cardimagehero.png);
+    /* background: linear-gradient(90deg, #0009 1%, #0000 96.95%), url(../images/homepage/cardimagehero.png); */
     background-repeat: no-repeat;
     background-size: 100% 100%;
     object-fit: cover;
     border-radius: 15px;
+    background: #ffffff1f;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
 }
 
 .Hero_Section .card .card-heading {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 600;
     line-height: 38px;
     color: #fff;
-    margin: 0;
-    max-width: 60%;
+    margin: 10px;
 }
 
 .Hero_Section .card .card-perograph {
-    max-width: 60%;
     text-align: left;
     font-size: 13px;
     font-weight: 400;
@@ -94,17 +96,16 @@ body {
     padding-left: 0;
     display: flex;
     align-items: center;
-    max-width: 60%;
     gap: 0.5rem;
 }
 
 .Hero_Section .card .buttonlist li {
-    width: 32.333337%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     border-radius: 12px;
     padding: 6px 8px;
-    background: #ffffff1f;
+    background: #6c6c6c73;
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     min-height: 50px;
@@ -136,25 +137,30 @@ body {
 
 .Farm_People_Section .inputpart {
     position: relative;
+    min-width: 266px;
 }
 
 .Farm_People_Section .inputpart .icon {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 44px;
+    height: 44px;
     top: 0;
     left: 0;
-    transform: translate(10px, 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Farm_People_Section .inputpart input {
     padding-left: 40px;
-    width: auto;
+    width: 100%;
     background-color: transparent;
     border-radius: 30px;
     border-color: #424141;
     color: white;
     height: 45px;
+    font-size: 14px;
+    box-shadow: none;
 }
 
 .Farm_People_Section .inputpart input::placeholder {
@@ -193,9 +199,12 @@ body {
 .Farm_People_Section .buttonsec {
     transition: all 0.3s ease-in-out;
     border-radius: 30px;
-    padding: 6px 10px;
+    padding: 5px 16px;
     height: 45px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .Farm_People_Section .buttonsec:hover {
@@ -204,6 +213,8 @@ body {
 
 .Farm_People_Section .buttonsec button {
     background-color: transparent;
+    padding: 0;
+
 }
 
 .Farm_People_Section .listcard {
@@ -224,8 +235,22 @@ body {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
+.Farm_People_Section .listcard .contectsec .heading span {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Farm_People_Section .listcard .contectsec .heading span svg{
+    width: 100%;
+    height: 100%;
+}
 .Farm_People_Section .listcard .contectsec ul {
     list-style: none;
     padding-left: 0;
@@ -237,7 +262,7 @@ body {
 .Farm_People_Section .listcard .contectsec ul li {
     background-color: #32394E;
     font-size: 14px;
-    color: #F58B00;
+    color: var(--primary-color);
     padding: 6px 10px;
     border-radius: 8px;
 
@@ -265,7 +290,7 @@ body {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background-color: #F58B00;
+    background-color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -362,7 +387,7 @@ footer .footerlist li a {
 
 footer .footerbottomheading {
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
     overflow-wrap: break-word;
     margin-bottom: 10px;
@@ -370,14 +395,15 @@ footer .footerbottomheading {
 
 footer p {
     margin: 3px;
-    color: white;
+    color: #7d7b7b;
     font-size: 14px;
 }
 
 /* Footer Css End */
 /* Page2 Css Start */
 .Page2 {}
-.Page2 .backtolistbtn{
+
+.Page2 .backtolistbtn {
     text-decoration: none;
     font-size: 14px;
     color: #fff3d4;
@@ -388,9 +414,11 @@ footer p {
     margin-bottom: 20px;
     transition: all 0.3s ease-in-out;
 }
-.Page2 .backtolistbtn:hover{
+
+.Page2 .backtolistbtn:hover {
     color: var(--primary-color);
 }
+
 .Page2 .buttonGroup {
     background-color: #1d232e;
     border-radius: 30px;
@@ -683,7 +711,8 @@ footer p {
     align-items: center;
     gap: 0.1rem;
 }
-.Page2 .tabsect .card .groupbuttontext .inputyGroup .form-control{
+
+.Page2 .tabsect .card .groupbuttontext .inputyGroup .form-control {
     background: transparent;
     border: 0;
     box-shadow: none;
@@ -691,15 +720,18 @@ footer p {
     text-align: end;
     margin-bottom: 15px;
 }
-.Page2 .tabsect .card .groupbuttontext .inputyGroup .inputGroup{
+
+.Page2 .tabsect .card .groupbuttontext .inputyGroup .inputGroup {
     font-size: 14px;
     color: #fff3d4;
     text-align: end;
 }
-.Page2 .tabsect .card .groupbuttontext .inputyGroup .inputGroup span{
+
+.Page2 .tabsect .card .groupbuttontext .inputyGroup .inputGroup span {
     color: var(--primary-color);
 }
-.Page2 .tabsect .card .walletbtn{
+
+.Page2 .tabsect .card .walletbtn {
     background: var(--primary_gradient-color);
     width: 100%;
     height: 55px;
@@ -708,4 +740,45 @@ footer p {
     font-weight: 600;
     margin-top: 15px;
 }
+
+
+/* Tab2 section in */
+.tab2buttonGroup {
+    width: 100%;
+}
+
+.tab2buttonGroup .nav {
+    width: 100%;
+    background: #1d232e;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.tab2buttonGroup .nav .nav-item {
+    width: 50%;
+    height: 50px;
+}
+
+.tab2buttonGroup .nav .nav-item .nav-link {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #616771;
+    transition: all 0.3s ease-in-out;
+    background: #1d232e;
+    border-radius: 0;
+    height: 100%;
+}
+
+.tab2buttonGroup .nav .nav-item .nav-link:hover {
+    color: white;
+}
+
+.tab2buttonGroup .nav .nav-item .nav-link.active {
+    background: var(--primary_gradient-color);
+    color: black;
+}
+
+
+
 /* Page2 Css End */
