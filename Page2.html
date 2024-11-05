@@ -70,8 +70,8 @@
 
     <!-- Pandle Open Section Start -->
     <div class="container-fluid Page2 py-5">
-        <div class="container">
-            <div class="row pb-5">
+        <div class="container px_0">
+            <div class="row pb-md-5 pb-3">
                 <div class="col-12">
                     <a class="backtolistbtn" href="/index.html"><span><i class="fa-solid fa-arrow-left"></i></span> Back
                         to List <span></span></a>
@@ -102,22 +102,25 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <ul class="nav nav-pills mb-3 firstNav" id="pills-tab" role="tablist">
+                <div class="col-12 mb-2">
+                    <ul class="nav nav-pills firstNav" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-Swap-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-Swap" type="button" role="tab" aria-controls="pills-Swap"
+                            <button class="nav-link active" id="pills-Swap-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-Swap" type="button"
+                                role="tab" aria-controls="pills-Swap"
                                 aria-selected="true">Swap</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-Liquidity-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-Liquidity" type="button" role="tab"
-                                aria-controls="pills-Liquidity" aria-selected="false">V2 Liquidity</button>
+                            <button class="nav-link" id="pills-Liquidity-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-Liquidity"
+                                type="button" role="tab" aria-controls="pills-Liquidity"
+                                aria-selected="false">V2 Liquidity</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-Liquidity2-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-Liquidity2" type="button" role="tab"
-                                aria-controls="pills-Liquidity2" aria-selected="false">L3 Liquidity</button>
+                            <button class="nav-link" id="pills-Liquidity2-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-Liquidity2"
+                                type="button" role="tab" aria-controls="pills-Liquidity2"
+                                aria-selected="false">L3 Liquidity</button>
                         </li>
                     </ul>
                 </div>
@@ -218,7 +221,7 @@
                                                 <div class="group">
                                                     <input type="radio" class="btn-check" name="options" id="option3"
                                                         autocomplete="off">
-                                                    <label class="btn" for="option3"><span>
+                                                    <label class="btn smallsvg" for="option3 "><span>
                                                             <svg width="140px" height="24px" viewBox="0 0 121 24"
                                                                 version="1.1" xmlns="http://www.w3.org/2000/svg">
                                                                 <path
@@ -235,9 +238,9 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div class="row mx-0 g-2">
+                                            <div class="row mx-0 g-2 set">
                                                 <div class="col-12 px-0">
-                                                    <div class="groupbuttontext">
+                                                    <div class="groupbuttontext" id="box1" onclick="swapBoxes(1)">
                                                         <div class="leftbutton">
                                                             <div class="icon"><img class="w-100 h-100"
                                                                     src="./deep-wyscle/images/homePage2/iconpage2.svg"
@@ -256,8 +259,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 px-0">
-                                                    <div class="groupbuttontext">
+                                                <div class="col-12 px-0 position-relative">
+                                                    <div class="plusbutton" id="box2" class="box" onclick="swapBoxes(2)"><i class="fa-solid fa-retweet"></i></div>
+                                                    <div class="groupbuttontext" id="box3" class="box" onclick="swapBoxes(3)">
                                                         <div class="leftbutton">
                                                             <div class="icon"><img class="w-100 h-100"
                                                                     src="./deep-wyscle/images/homePage2/pendle.png"
@@ -370,7 +374,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 px-0">
+                                                <div class="col-12 px-0 position-relative">
+                                                    <div class="plusbutton"><i class="fa-solid fa-plus"></i></div>
                                                     <div class="groupbuttontext">
                                                         <div class="leftbutton">
                                                             <div class="icon"><img class="w-100 h-100"
@@ -482,12 +487,12 @@
                                     </div>
                                 </div>
                             </div>
-                           
                         </div>
-                        <div class="tab-pane fade" id="pills-Liquidity2" role="tabpanel" aria-labelledby="pills-Liquidity2-tab" tabindex="0">
+                        <div class="tab-pane fade" id="pills-Liquidity2" role="tabpanel"
+                            aria-labelledby="pills-Liquidity2-tab" tabindex="0">
                             <div class="row mx-0 tabsectV3Liquidtiy">
-                                <div class="col-12">
-                                    <div class="card">
+                                <div class="col-12 px-0">
+                                    <div class="card mt-0">
                                         <div class="card-body">
                                             <div class="headingiconGroup">
                                                 <div class="leftside">
@@ -495,125 +500,289 @@
                                                     <p>Aggregator mode</p>
                                                 </div>
                                                 <div class="rightside">
-                                                    <button class="btn"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+                                                    <button class="btn"><i
+                                                            class="fa-solid fa-arrow-rotate-right"></i></button>
                                                     <button class="btn"><i class="fa-solid fa-gear"></i></button>
                                                 </div>
                                             </div>
                                             <div class="row mx-0 g-3">
                                                 <div class="col-lg-6 ps-0">
-                                                    <div class="checkheading">
+                                                    <div class="checkheading" >
                                                         <div class="Inheading">1. Select a pair</div>
                                                         <div class="checkicon"><i class="fa-solid fa-check"></i></div>
                                                     </div>
-                                                    <div class="iconImageSwippeGroup mb-3">
-                                                        <div class="leftcontent">
-                                                            <div class="iconimage"><img class="w-100 h-100" src="./deep-wyscle/images/homePage2/pendle.png" alt="icon"></div>
+                                                    <div class="iconImageSwippeGroup mb-3" >
+                                                        <div class="leftcontent" id="section1">
+                                                            <div class="iconimage"><img class="w-100 h-100"
+                                                                    src="./deep-wyscle/images/homePage2/pendle.png"
+                                                                    alt="icon"></div>
                                                             <div class="tokenheadmodalbtn">
                                                                 <div class="headingmod">Tokem 1</div>
-                                                                <div class="pandletext">PEMDLE <span><i class="fa-solid fa-angle-down"></i></span></div>
+                                                                <div class="pandletext">PEMDLE <span><i
+                                                                            class="fa-solid fa-angle-down"></i></span>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="swippebtn"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
-                                                        <div class="rightcontent">
-                                                            <div class="iconimage"><img class="w-100 h-100" src="./deep-wyscle/images/homePage2/pendle.png" alt="icon"></div>
+                                                        <div class="swippebtn" id="section2"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                                                        <div class="rightcontent" id="section3">
+                                                            <div class="iconimage"><img class="w-100 h-100"
+                                                                    src="./deep-wyscle/images/homePage2/pendle.png"
+                                                                    alt="icon"></div>
                                                             <div class="tokenheadmodalbtn">
                                                                 <div class="headingmod">Tokem 2</div>
-                                                                <div class="pandletext">ETH <span><i class="fa-solid fa-angle-down"></i></span></div>
+                                                                <div class="pandletext">ETH <span><i
+                                                                            class="fa-solid fa-angle-down"></i></span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="checkheading">
+                                                    <div class="checkheading" >
                                                         <div class="Inheading">2. Select a mode</div>
                                                         <div class="checkicon"><i class="fa-solid fa-check"></i></div>
                                                     </div>
                                                     <div class="tablist">
                                                         <ul class="nav nav-pills mb-5 " id="pills-tab" role="tablist">
                                                             <li class="nav-item" role="presentation">
-                                                                <button class="nav-link active" id="pills-Menual-tab" data-bs-toggle="pill" data-bs-target="#pills-Menual" type="button" role="tab" aria-controls="pills-Menual" aria-selected="true">Menual</button>
+                                                                <button class="nav-link active" id="pills-Menual-tab"
+                                                                    data-bs-toggle="pill" data-bs-target="#pills-Menual"
+                                                                    type="button" role="tab"
+                                                                    aria-controls="pills-Menual"
+                                                                    aria-selected="true">Menual</button>
                                                             </li>
                                                             <li class="nav-item" role="presentation">
-                                                                <button class="nav-link" id="pills-Auto-tab" data-bs-toggle="pill" data-bs-target="#pills-Auto" type="button" role="tab" aria-controls="pills-Auto" aria-selected="false">Auto</button>
+                                                                <button class="nav-link" id="pills-Auto-tab"
+                                                                    data-bs-toggle="pill" data-bs-target="#pills-Auto"
+                                                                    type="button" role="tab" aria-controls="pills-Auto"
+                                                                    aria-selected="false">Auto</button>
                                                             </li>
                                                         </ul>
                                                         <div class="tab-content" id="pills-tabContent">
-                                                        <div class="tab-pane fade show active" id="pills-Menual" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                                                            <div class="row mx-0 Menualtab">
-                                                                <div class="col-12 px-0">
-                                                                    <div class="checkheading">
-                                                                        <div class="Inheading">3. Set a range</div>
-                                                                        <div class="checkicon"><i class="fa-solid fa-check"></i></div>
+                                                            <div class="tab-pane fade show active" id="pills-Menual"
+                                                                role="tabpanel" aria-labelledby="pills-home-tab"
+                                                                tabindex="0">
+                                                                <div class="row mx-0 Menualtab g-2">
+                                                                    <div class="col-12 px-0">
+                                                                        <div class="checkheading">
+                                                                            <div class="Inheading">3. Set a range</div>
+                                                                            <div class="checkicon"><i
+                                                                                    class="fa-solid fa-check"></i></div>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="col-12 px-0">
-                                                                    <div class="card cardgrouptext">
-                                                                        <div class="card-body">
-                                                                            <div class="row mx-0 align-items-center">
-                                                                                <div class="col-4 px-1">
-                                                                                    <div class="menualHeading">Current price</div>
-                                                                                    <div class="subHeadinM">1 ETH =  559.98 PENDLE</div>
-                                                                                </div>
-                                                                                <div class="col-2 px-1">
-                                                                                    <div class="menualHeading">ETH ratio</div>
-                                                                                    <div class="subHeadinM">47.53%</div>
-                                                                                </div>
-                                                                                <div class="col-3 px-1">
-                                                                                    <div class="menualHeading">PENDLE ratio</div>
-                                                                                    <div class="subHeadinM">52.46%</div>
-                                                                                </div>
-                                                                                <div class="col-3 px-1">
-                                                                                    <div class="buttongrp">
-                                                                                        <button class="btn active">PENDLE</button>
-                                                                                        <button class="btn">ETH</button>
+                                                                    <div class="col-12 px-0">
+                                                                        <div class="card cardgrouptext">
+                                                                            <div class="card-body">
+                                                                                <div
+                                                                                    class="row mx-0 align-items-center">
+                                                                                    <div class="col-md-4 col-7 order-1 px-1">
+                                                                                        <div class="menualHeading">
+                                                                                            Current price</div>
+                                                                                        <div class="subHeadinM">1 ETH =
+                                                                                            559.98 PENDLE</div>
+                                                                                    </div>
+                                                                                    <div class="col-md-2 col-6 order-3 order-md-2 px-1">
+                                                                                        <div class="menualHeading">ETH
+                                                                                            ratio</div>
+                                                                                        <div class="subHeadinM">47.53%
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-3 col-6 order-4 order-md-3 px-1">
+                                                                                        <div class="menualHeading">
+                                                                                            PENDLE ratio</div>
+                                                                                        <div class="subHeadinM">52.46%
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-3 col-5 order-2 order-md-4 px-1">
+                                                                                        <div class="buttongrp">
+                                                                                            <button
+                                                                                                class="btn active">PENDLE</button>
+                                                                                            <button
+                                                                                                class="btn">ETH</button>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="col-12 px-0">
-                                                                    <div class="GroupMenualTab">
-                                                                        <button class="btn select">Full range</button>
-                                                                        <button class="btn">Wide</button>
-                                                                        <button class="btn">Common</button>
-                                                                        <button class="btn">Narrow</button>
+                                                                    <div class="col-12 px-0">
+                                                                        <div class="headings text-secondary mb-1">
+                                                                            Presets</div>
+                                                                        <div class="GroupMenualTab">
+                                                                            <button class="btn select">Full
+                                                                                range</button>
+                                                                            <button class="btn">Wide</button>
+                                                                            <button class="btn">Common</button>
+                                                                            <button class="btn">Narrow</button>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="col-12 px-0 d-none">
-                                                                    <div class="row mt-2 gy-2 incressdicresssec">
-                                                                        <div class="col-md-6">
-                                                                            <div class="text-secondary text-weight-400 mb-1"> Min PENDLE per ETH price</div> 
-                                                                            <div class="d-flex align-items-center">
-                                                                                <button type="button" class="btn btn-input btn-input-left btn-secondary"><i class="mdi mdi-minus px-2"></i></button> 
-                                                                                <input type="text" class="flex-grow-1 rounded-0 form-control" id="__BVID__299" > 
-                                                                                <button type="button" class="btn btn-input btn-input-right btn-secondary"><i class="mdi mdi-plus px-2"></i></button>
+                                                                    <div class="col-12 px-0 ">
+                                                                        <div class="row mt-2 gy-2 incressdicresssec">
+                                                                            <div class="col-md-6">
+                                                                                <div
+                                                                                    class="textsecondary text-weight-400 mb-1">
+                                                                                    Min D2 per ETH price</div>
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <button type="button"
+                                                                                        class="btn btn-input btn-input-left btn-secondary"
+                                                                                        id="minus__BVID__299"><i
+                                                                                            class="fa-solid fa-minus px-2"></i></button>
+                                                                                    <input type="text" value="0"
+                                                                                        class="flex-grow-1 rounded-0 form-control"
+                                                                                        id="__BVID__299">
+                                                                                    <button type="button"
+                                                                                        class="btn btn-input btn-input-right btn-secondary"
+                                                                                        id="plus__BVID__299"><i
+                                                                                            class="fa-solid fa-plus px-2"></i></button>
+                                                                                </div>
                                                                             </div>
-                                                                        </div> 
-                                                                        <div class="col-md-6">
-                                                                            <div class="text-secondary text-weight-400 mb-1"> Max PENDLE per ETH price</div> 
-                                                                            <div class="d-flex align-items-center">
-                                                                                <button type="button" class="btn btn-input btn-input-left btn-secondary"><i class="mdi mdi-minus px-2"></i></button>
-                                                                                <input type="text" class="flex-grow-1 rounded-0 form-control" id="__BVID__300"> 
-                                                                                <button type="button" class="btn btn-input btn-input-right btn-secondary"><i class="mdi mdi-plus px-2"></i></button>
+                                                                            <div class="col-md-6">
+                                                                                <div
+                                                                                    class="textsecondary text-weight-400 mb-1">
+                                                                                    Max D2 per ETH price</div>
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <button type="button"
+                                                                                        class="btn btn-input btn-input-left btn-secondary"
+                                                                                        id="minus__BVID__300"><i
+                                                                                            class="fa-solid fa-minus px-2"></i></button>
+                                                                                    <input type="text" value="0"
+                                                                                        class="flex-grow-1 rounded-0 form-control"
+                                                                                        id="__BVID__300">
+                                                                                    <button type="button"
+                                                                                        class="btn btn-input btn-input-right btn-secondary"
+                                                                                        id="plus__BVID__300"><i
+                                                                                            class="fa-solid fa-plus px-2"></i></button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 px-0">
+                                                                        <div class="checkheading mt-3">
+                                                                            <div class="Inheading">4. Input amounts
+                                                                            </div>
+                                                                            <!-- <div class="checkicon"><i class="fa-solid fa-check"></i></div> -->
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 px-0">
+                                                                        <div class="groupbuttontext">
+                                                                            <div class="leftbutton">
+                                                                                <div class="icon"><img
+                                                                                        class="w-100 h-100"
+                                                                                        src="./deep-wyscle/images/homePage2/iconpage2.svg"
+                                                                                        alt="">
+                                                                                </div>
+                                                                                <div class="btn modalbtn">
+                                                                                    <span class="samlltext">Form</span>
+                                                                                    <span class="spn2"> ETH <i
+                                                                                            class="fa-solid fa-angle-down"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="inputyGroup">
+                                                                                <input class="form-control" type="text"
+                                                                                    placeholder="" value="0.00">
+                                                                                <p class="inputGroup">balance: 0
+                                                                                    <span>Max</span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 px-0 position-relative">
+                                                                        <div class="plusbutton"><i
+                                                                                class="fa-solid fa-plus"></i></div>
+                                                                        <div class="groupbuttontext">
+                                                                            <div class="leftbutton">
+                                                                                <div class="icon"><img
+                                                                                        class="w-100 h-100"
+                                                                                        src="./deep-wyscle/images/homePage2/pendle.png"
+                                                                                        alt="">
+                                                                                </div>
+                                                                                <div class="btn modalbtn">
+                                                                                    <span class="samlltext">Form</span>
+                                                                                    <span class="spn2"> ETH <i
+                                                                                            class="fa-solid fa-angle-down"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="inputyGroup">
+                                                                                <input class="form-control" type="text"
+                                                                                    placeholder="" value="0.00">
+                                                                                <p class="inputGroup">balance: 0
+                                                                                    <span>Max</span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="card Estimatedcard">
+                                                                            <div class="leftheading"><span><i
+                                                                                        class="fa-solid fa-chart-line"></i></span>Estimated
+                                                                                APR <small>(active ranges only )</small>
+                                                                            </div>
+                                                                            <div class="quectiobtn">0% <span><i
+                                                                                        class="fa-regular fa-circle-question"></i></span>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="tab-pane fade" id="pills-Auto" role="tabpanel" aria-labelledby="pills-Auto-tab" tabindex="0">...</div>
+                                                            <div class="tab-pane fade" id="pills-Auto" role="tabpanel"
+                                                                aria-labelledby="pills-Auto-tab" tabindex="0">...</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <div class="card border-0 m-0 p-0">
-                                                        <div class="card-body p-0">
-                                                            <div class="Graph">
-                                                                <img class="w-100 h-100" src="./deep-wyscle/images/homePage2/Graog.png" alt="">
+                                                    <div class="card graphCard">
+                                                        <div class="card-body">
+                                                            <div class="card-header">
+                                                                <div class="card-headerheading">Range
+                                                                    <span>visualizer</span></div>
+                                                                <div class="buttongroupthree">
+                                                                    <div class="btn garphbtn"><i
+                                                                            class="fa-solid fa-magnifying-glass-plus"></i>
+                                                                    </div>
+                                                                    <div class="btn garphbtn"><i
+                                                                            class="fa-solid fa-magnifying-glass-minus"></i>
+                                                                    </div>
+                                                                    <div class="btn garphbtn"><i
+                                                                            class="fa-solid fa-rotate"></i></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="inputformsec">
+                                                                From
+                                                                <input type="text" class="form-control">
+                                                                To
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                            <!-- Graph Point -->
+
+                                                            <!-- bottom side -->
+                                                            <div class="textlinesection">
+                                                                <div class="textline"><span class="line1"></span>
+                                                                    Selected range</div>
+                                                                <div class="textline"><span class="line2"></span>
+                                                                    Current price</div>
+                                                                <div class="textline"><span class="box"></span>
+                                                                    Liquidity distribution</div>
+                                                            </div>
+                                                            <div class="bottomHeading mb-3">
+                                                                <div class="leftheading">7D Average APR</div>
+                                                                <div class="rightheading">1.44% <span><i
+                                                                            class="fa-regular fa-circle-question"></i></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="bottomlist">
+                                                                <div class="listin">
+                                                                    <div class="textlist">TVL</div>
+                                                                    <div class="textlist">$8.2k</div>
+                                                                </div>
+                                                                <div class="listin">
+                                                                    <div class="textlist">Active TVL</div>
+                                                                    <div class="textlist">$8.1k</div>
+                                                                </div>
+                                                                <div class="listin">
+                                                                    <div class="textlist">Inactive TVL</div>
+                                                                    <div class="textlist">$73</div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12">
+                                                <div class="col-12 px-0">
                                                     <button class="btn btncONNECTwALLET">Connect Wallet</button>
                                                 </div>
                                             </div>
@@ -746,6 +915,41 @@
 
         <script src="./deep-wyscle/javascript/deep_wyscle.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Function to change the input value
+                function updateValue(buttonId, inputId, increment) {
+                    document.getElementById(buttonId).addEventListener("click", function () {
+                        const inputElement = document.getElementById(inputId);
+                        let currentValue = parseFloat(inputElement.value) || 0; // Parse the input value as a number or set to 0 if empty
+                        currentValue += increment; // Add or subtract based on increment value
+                        inputElement.value = currentValue;
+                    });
+                }
+
+                // Min D2 input buttons
+                updateValue("minus__BVID__299", "__BVID__299", -1); // Decrease by 1
+                updateValue("plus__BVID__299", "__BVID__299", 1);   // Increase by 1
+
+                // Max D2 input buttons
+                updateValue("minus__BVID__300", "__BVID__300", -1); // Decrease by 1
+                updateValue("plus__BVID__300", "__BVID__300", 1);   // Increase by 1
+            });
+
+        </script>
+        <script>
+                function swapBoxes(clickedBox) {
+                const box1 = document.getElementById("box1");
+                const box3 = document.getElementById("box3");
+            
+                if (clickedBox === 2) {
+                    // Swap content of box 1 and box 3
+                    const temp = box1.innerHTML;
+                    box1.innerHTML = box3.innerHTML;
+                    box3.innerHTML = temp;
+                }
+            }
+        </script>
 </body>
 
 </html>
