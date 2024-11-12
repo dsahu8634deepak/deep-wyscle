@@ -1,0 +1,828 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #141414;
+}
+
+.Dashboard {}
+
+.Dashboard .sidebar {
+    min-width: 280px;
+    background-color: #1d1d1d;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: min-width ease-in-out 0.3s;
+    overflow: hidden auto;
+    height: 100vh;
+    padding: 15px 15px;
+}
+
+.Dashboard .sidebar .logo {
+    width: 200px;
+}
+
+.Dashboard .sidebar .logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+.Dashboard .sidebar .toggle-btn {
+    background-color: #1d1d1d;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    outline: none;
+
+}
+
+.Dashboard .sidebar .toggle-btn svg {
+    transform: rotate(175deg);
+}
+
+.Dashboard .sidebar .menu {
+    flex: 1;
+    padding: 20px 0px;
+    flex-direction: column;
+    gap: 0.4rem;
+    display: flex;
+}
+
+.Dashboard .sidebar .menu .menu-icon {
+    display: block;
+    margin-right: 10px;
+    font-size: 18px;
+    height: 44px;
+    transition: background-color 420ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.Dashboard .sidebar .menu .menu-icon.active {
+    background: rgb(5 117 230 / 15%);
+}
+
+.Dashboard .sidebar .menu .menu-icon.active .sidemeniulink figure i {
+    color: #0575E6;
+}
+
+.Dashboard .sidebar .menu .menu-icon.active .sidemeniulink .menu-text {
+    color: #0575E6;
+}
+
+.Dashboard .sidebar .menu .menu-icon.active .sidemeniulink .menu-text span i {
+    color: #0575E6;
+}
+
+.Dashboard .sidebar .menu .menu-icon:hover {
+    background-color: #272727;
+    color: #fff;
+    transition: all 420ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+.Dashboard .sidebar .menu .menu-icon:hover .sidemeniulink figure i {
+    color: white;
+    transition: all 420ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+.Dashboard .sidebar .menu .menu-icon:hover .sidemeniulink .menu-text {
+    color: white;
+    transition: all 420ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+.Dashboard .sidebar .menu .menu-icon:hover .sidemeniulink .menu-text span i {
+    color: white;
+    transition: all 420ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+.Dashboard .sidebar .menu .menu-icon .sidemeniulink {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Dashboard .sidebar .menu .menu-icon .sidemeniulink figure {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.Dashboard .sidebar .menu .menu-icon .sidemeniulink figure i {
+    width: 100%;
+    height: 100%;
+    color: #EBEBF599;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Dashboard .sidebar .menu .menu-icon .sidemeniulink .menu-text {
+    display: inline;
+    transition: opacity 0.3s;
+    color: #EBEBF599;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.Dashboard .sidebar .menu .menu-icon .sidemeniulink .menu-text span i {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.Dashboard .sidebar.collapsed {
+    position: sticky;
+    top: 0;
+    min-width: 68px;
+    width: 68px;
+    height: 100vh;
+    background: var(--duf-sidebar-bg, #1d1d1d);
+    z-index: 1025;
+    transition: min-width ease-in-out 0.3s;
+}
+
+.Dashboard .sidebar.collapsed .menu-text {
+    display: none;
+}
+
+.Dashboard .main-content {
+    flex: 1;
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden auto;
+}
+
+.Dashboard .main-content .header {
+    background-color: #141414;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.Dashboard .main-content .header .createfarmbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    padding: 10px 16px;
+    background: #141414;
+    border: 1px solid #38383A;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 100px;
+    transition: all .1s ease-in-out;
+    width: fit-content;
+}
+
+.Dashboard .main-content .header .createfarmbutton span {
+    transform: rotate(-45deg);
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn1 {
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn1 .btnsecondary {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid #38383A;
+    border-radius: 50%;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn1 .btnsecondary::after {
+    display: none;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn1 .dropdown-menu {
+    height: 247px;
+    background-color: #1D1D1D;
+    border-radius: 8px;
+    border: 1px solid #38383A;
+    overflow-y: auto;
+    padding: 10px 5px;
+    width: 200px;
+}
+
+/* Targeting the scrollbar within the specific parent container */
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn1 .dropdown-menu::-webkit-scrollbar {
+    width: 4px;
+    height: auto;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn1 .dropdown-menu::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Customize color */
+    border-radius: 40px;
+    /* Rounded corners */
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn1 .dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Darker color on hover */
+}
+
+/* Firefox-specific styles */
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn1 .dropdown-menu {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn1 .dropdown-menu li {
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    height: 32px;
+    margin-bottom: 10px;
+
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn1 .dropdown-menu li:hover {
+    background: #303030;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn1 .dropdown-menu li .dropdown-item {
+    font-size: 14px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: transparent;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn1 .dropdown-menu li .dropdown-item span {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Dashboard .main-content .header .GroupbuttonHeader .middlebtn {
+    background: #0575E6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn2 {}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn2 .btnsecondary {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #272727;
+    border-radius: 50%;
+    border: 1px solid #272727;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn2 .btnsecondary i {
+    color: white;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn2 .btnsecondary::after {
+    display: none;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn2 .dropdown-menu {}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn2 .dropdown-menu {
+    background-color: #1D1D1D;
+    border-radius: 8px;
+    border: 0;
+    padding: 25px 0px;
+    margin-top: 5px;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn2 .dropdown-menu li {
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn2 .dropdown-menu li .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 230px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn2 .dropdown-menu li:hover {
+    background: rgb(52 52 52);
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn2 .dropdown-menu li:hover .dropdown-item {
+    color: #0575E6;
+}
+
+.Dashboard .main-content .header .GroupbuttonHeader .dropdownbtn2 .dropdown-menu li .dropdown-item span {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Contet */
+.Dashboard .main-content .content {
+    flex: 1;
+    padding: 20px 10px;
+}
+
+.Dashboard .main-content .content .topcard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    color: var(--header-box);
+    background: linear-gradient(90deg, #0009 1%, #0000 96.95%), url(../image/banner-bg.jpeg);
+    background-size: cover;
+    background-position: right;
+    border-radius: 40px;
+    padding: 32px;
+    border: 0;
+}
+
+.Dashboard .main-content .content .topcard .card-heading {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #fff;
+    max-width: 30%;
+    margin: 0;
+}
+
+.Dashboard .main-content .content .topcard .card-perograph {
+    max-width: 30%;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #ebebf599;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 18px;
+}
+
+.Dashboard .main-content .content .topcard .buttonlist {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 10px;
+    gap: 8px;
+    padding-left: 0;
+}
+
+.Dashboard .main-content .content .topcard .buttonlist li {
+    display: flex;
+    flex-direction: column;
+    min-width: 90px;
+    border-radius: 12px;
+    padding: 6px 8px;
+    background: #ffffff1f;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    min-height: 50px;
+
+}
+
+.Dashboard .main-content .content .topcard .buttonlist .tophed {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.Dashboard .main-content .content .topcard .buttonlist li .bottomp {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #ebebf599;
+}
+
+.Dashboard .main-content .content .topcard .bottompwer {
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #ebebf54d;
+}
+
+
+/* Farm And People Section Start */
+.Farm_People_Section {
+    padding-top: 80px;
+}
+
+.Farm_People_Section .heading {
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.Farm_People_Section .inputpart {
+    position: relative;
+    min-width: 266px;
+}
+
+.Farm_People_Section .inputpart .icon {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Farm_People_Section .inputpart input {
+    padding-left: 40px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 30px;
+    border-color: #424141;
+    color: white;
+    height: 45px;
+    font-size: 14px;
+    box-shadow: none;
+}
+
+.Farm_People_Section .inputpart input::placeholder {
+    color: #7b7a7a;
+}
+
+.Farm_People_Section .tabssec {
+    background-color: #272727;
+    border-radius: 30px;
+    padding: 6px 10px;
+    height: 45px;
+}
+
+.Farm_People_Section .tabssec .nav {
+    border-radius: 30px;
+}
+
+.Farm_People_Section .tabssec .nav .nav-item {}
+
+.Farm_People_Section .tabssec .nav .nav-item {}
+
+.Farm_People_Section .tabssec .nav .nav-link {
+    border-radius: 30px;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #9C9CA2;
+
+}
+
+.Farm_People_Section .tabssec .nav .nav-link.active {
+    background: #0575e6;
+    color: white;
+}
+
+.Farm_People_Section .buttonsec {
+    transition: all 0.3s ease-in-out;
+    border-radius: 30px;
+    padding: 5px 14px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.Farm_People_Section .buttonsec .nav-pills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 0;
+}
+
+.Farm_People_Section .buttonsec .nav-pills .nav-item {
+    padding: 0;
+    background: transparent;
+}
+
+.Farm_People_Section .buttonsec .nav-pills .nav-item .nav-link.active {
+    background-color: transparent;
+}
+
+.Farm_People_Section .buttonsec .nav-pills .nav-item .nav-link {
+    padding: 0;
+}
+
+.Farm_People_Section .buttonsec:hover {
+    background: #272727;
+}
+/* listitemstop CSS START*/
+.Farm_People_Section .listitemstop{
+    width: 100%;
+    margin-top: 20px;
+}
+.Farm_People_Section .listitemstop .listtoken{
+    display: grid;
+    grid-template-columns: 64px 214px 160px repeat(3, 1fr) 30px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 8px;
+    padding: 0 20px;
+    list-style: none;
+}
+.Farm_People_Section .listitemstop .listtoken li{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+.Farm_People_Section .listitemstop .listtoken li {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+.Farm_People_Section .listitemstop .listtoken li .anker{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+
+/* List Card start */
+.Farm_People_Section .listcard {
+    border-radius: 10px;
+    background: #1D232E;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+
+
+/* List Card End */
+/* Samll Card start css */
+.Farm_People_Section .smallcard {
+    border-radius: 20px;
+    position: relative;
+    text-decoration: none;
+}
+
+/* .Farm_People_Section .smallcard .card1:hover{
+    transform:scale(1);
+}
+.Farm_People_Section .smallcard .card1{
+    transform:scale(1.1);
+} */
+.Farm_People_Section .smallcard .card1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/homepage/smallcardimage.svg);
+}
+
+.Farm_People_Section .smallcard .card2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/homepage/banner.png);
+}
+
+.Farm_People_Section .smallcard .card3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/homepage/banner2.png);
+    object-fit: cover;
+}
+
+.Farm_People_Section .smallcard .card4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/homepage/banner3.png);
+}
+
+.Farm_People_Section .smallcard .card1,
+.Farm_People_Section .smallcard .card2,
+.Farm_People_Section .smallcard .card3,
+.Farm_People_Section .smallcard .card4 {
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+}
+
+
+.Farm_People_Section .smallcard .image_Heading {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.Farm_People_Section .smallcard .image_Heading .Small_Card_Heading {
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.Farm_People_Section .smallcard .image_Heading .Small_Card_Heading .firicon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Farm_People_Section .smallcard .card_icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Farm_People_Section .smallcard .SmallCardlistButton {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.Farm_People_Section .smallcard .SmallCardlistButton li {
+    font-size: 14px;
+    color: var(--primary-color);
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: #6c6c6c73;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+.Farm_People_Section .smallcard .stats {}
+
+.Farm_People_Section .smallcard .stats .tvf-stats {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.Farm_People_Section .smallcard .stats .tvf-stats .buttontextGroup {
+    font-size: 14px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 0.5rem;
+    font-weight: 600
+}
+
+.Farm_People_Section .smallcard .stats .tvf-stats .buttontextGroup .icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Farm_People_Section .smallcard .stats .tvf-stats .buttontextGroup .lasttext {
+    font-size: 12px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.Farm_People_Section .smallcard .button_image_Box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Farm_People_Section .smallcard .button_image_Box .viewbtn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-left: auto;
+    background: var(--primary_gradient-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 0.3rem;
+}
+
+.Farm_People_Section .smallcard .button_image_Box .imagelist {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.Farm_People_Section .smallcard .button_image_Box .imagelist>*:not(:first-child) {
+    margin-left: -7px;
+}
+
+.Farm_People_Section .smallcard .button_image_Box .imagelist li {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Small Card Css End */
+.buttonImagesec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.buttonImagesec .viewbtn {
+    background: #11151C;
+    color: #616771;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 0;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttonImagesec .viewbtn:hover {
+    background: #11151C;
+}
+
+.buttonImagesec .viewbtn:active {
+    background: #11151C;
+}
+
+.buttonImagesec .imagelist {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+.buttonImagesec .imagelist li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.buttonImagesec .imagelist li img {
+    border-radius: 50%;
+}
+
+/* Farm And People Section End */
